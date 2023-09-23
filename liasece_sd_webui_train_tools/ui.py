@@ -61,7 +61,7 @@ def new_ui():
                 with gr.Box():
                     gr.Markdown(f"### Current Dataset to be trained")
                     with gr.Row():
-                        gr_project_version_dataset_gallery = gr.Gallery(value=None, label='Output', show_label=False, elem_id=f"gr_project_version_dataset_gallery").style(grid=4)
+                        gr_project_version_dataset_gallery = gr.Gallery(value=None, label='Output', show_label=False, elem_id=f"gr_project_version_dataset_gallery", rows=4)
                     with gr.Row():
                         gr_project_version_dataset_label = gr.Textbox(f"Dataset: None", label='Dataset', lines=1, interactive = False)
             with gr.Column():
@@ -200,7 +200,7 @@ def new_ui():
                         with gr.Column(scale=2):
                             # UI: train checkpoints item preview action
                             with gr.Row():
-                                train_checkpoint_txt2txt_preview_gallery_list.append(gr.Gallery(value = None, visible= False, label='Output', show_label=False, elem_id=f"train_checkpoint_txt2txt_preview_gallery").style(grid=[4]))
+                                train_checkpoint_txt2txt_preview_gallery_list.append(gr.Gallery(value = None, visible= False, label='Output', show_label=False, elem_id=f"train_checkpoint_txt2txt_preview_gallery", rows=4))
                                 train_checkpoint_txt2txt_preview_single_image_list.append(gr.Image(value = None, visible=False, label='Output', show_label=False, elem_id=f"txt2txt_image", interactive=False))
                             with gr.Row():
                                 train_checkpoint_txt2txt_preview_btn_log_list.append(gr.HTML(elem_id=f'html_log_Preview'))
