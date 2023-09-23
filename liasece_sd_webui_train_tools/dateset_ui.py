@@ -98,7 +98,7 @@ def on_ui_update_dataset_click(id: str, project: str, version: str, input_train_
             train_num_repetitions = int(512 / len(input_train_data_set_files))
         if train_num_repetitions <= 4:
             train_num_repetitions = 4
-    processed_output_path = os.path.join(processed_path, str(train_num_repetitions)+"_"+project)
+    processed_output_path = os.path.join(processed_path, str(train_num_repetitions)+"_"+str(project))
     os.makedirs(processed_output_path, exist_ok=True)
     os.makedirs(origin_preload_data_path, exist_ok=True)
 
